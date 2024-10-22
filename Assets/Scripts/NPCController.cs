@@ -1,18 +1,23 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class NPCController : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [SerializeField] private GameObject _target;
+    private NavMeshAgent _agent;
+    private Animator _animator;
 
-    // Update is called once per frame
-    void Update()
+    private void Start()
     {
-        
+        _agent = GetComponent<NavMeshAgent>();
+        _agent.SetDestination(_target.transform.position);
+        _animator = GetComponent<Animator>();
+        Debug.Log(_animator);
+    }
+    private void Update()
+    {
+        _animator.SetFloat("Speed", _agent.velocity.magnitude);
     }
 }
