@@ -12,6 +12,12 @@ destinations différentes qui changent chaque fois que l'on appuie sur "E".
 Petit problème que je règlerai plus tard : l'animation de saut se joue bizarrement, comme si le perso était 
 attiré vers le sol.
 
+01/12
+
+J'ai réglé le problème avec l'animation de saut, il fallait juste selectionner une option dans les
+param de l'anim. J'ai 2 anims de saut, une pour quand on saute sur place et l'autre pour si on saute
+en courant.
+
 Question Studio : 
 
 Je pense que je demanderais d'abord comment implanter des modèles/animations dans le logiciel.
